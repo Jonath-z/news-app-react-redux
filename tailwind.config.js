@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+const lineClamp = require("@tailwindcss/line-clamp");
+
 module.exports = {
-  content: [],
+  content: ["./src/**/*.jsx"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: "Poppins",
+      },
+    },
   },
-  plugins: [],
-}
+  plugins: [lineClamp],
+};
